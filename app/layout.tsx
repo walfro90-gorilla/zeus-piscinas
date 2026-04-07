@@ -48,12 +48,21 @@ export const metadata: Metadata = {
     url: siteUrl,
     locale: 'es_MX',
     siteName: 'ZEUS Piscinas',
+    images: [
+      {
+        url: `${siteUrl}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'ZEUS Piscinas — Construcción de albercas de lujo en Ciudad Juárez',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ZEUS Piscinas — Albercas de lujo en Ciudad Juárez',
     description:
       'Construcción, remodelación y mantenimiento de albercas de lujo en Ciudad Juárez. Cotiza gratis por WhatsApp: +52 656 645 2656.',
+    images: [`${siteUrl}/og-image.jpg`],
   },
 };
 
