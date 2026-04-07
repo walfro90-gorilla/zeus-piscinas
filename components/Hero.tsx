@@ -1,9 +1,12 @@
-const WHATSAPP_URL = 'https://wa.me/526561234567?text=Hola%20ZEUS%20Piscinas%2C%20quiero%20cotizar%20mi%20proyecto.';
+import heroBg from '../assets/hero.jpeg';
+
+const WHATSAPP_URL = 'https://wa.me/526566452656?text=Hola%20ZEUS%20Piscinas%2C%20quiero%20cotizar%20mi%20proyecto.';
 const MESSENGER_URL = 'https://m.me/zeuspiscinas';
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-slate-950 text-white">
+      <img src={heroBg.src} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover opacity-30" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.18),_transparent_40%),radial-gradient(circle_at_bottom_right,_rgba(250,204,21,0.12),_transparent_35%)]" />
 
       <div className="relative mx-auto flex min-h-[88vh] max-w-7xl items-center px-6 py-20 lg:px-8">

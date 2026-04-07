@@ -1,8 +1,20 @@
 const services = [
-  { title: 'Construcción de piscinas de lujo', description: 'Proyecto completo desde el concepto hasta la entrega final, con enfoque en estética, durabilidad y funcionalidad.' },
-  { title: 'Mantenimiento profesional', description: 'Limpieza, balance químico, revisión de equipos y conservación para mantener el agua cristalina todo el año.' },
-  { title: 'Remodelación y modernización', description: 'Actualizamos piscinas existentes con acabados premium, iluminación, sistemas eficientes y detalles de alto impacto.' },
-  { title: 'Tecnología y automatización', description: 'Integración de sistemas inteligentes para control de filtración, iluminación y operación más eficiente.' },
+  {
+    title: 'Construcción de albercas en Ciudad Juárez',
+    description: 'Diseño y construcción de albercas residenciales y comerciales en Ciudad Juárez desde el concepto hasta la entrega final. Trabajamos con materiales de primera y acabados premium que elevan el valor de tu propiedad.',
+  },
+  {
+    title: 'Mantenimiento profesional de albercas',
+    description: 'Servicio de mantenimiento periódico en toda la zona de Ciudad Juárez: limpieza, balance químico, revisión de bombas y filtros. Agua cristalina y equipo en óptimas condiciones todo el año.',
+  },
+  {
+    title: 'Remodelación de albercas en Juárez',
+    description: 'Modernizamos albercas existentes en Ciudad Juárez con nuevos acabados, iluminación LED, sistemas de filtración eficientes y detalles arquitectónicos de alto impacto.',
+  },
+  {
+    title: 'Automatización y tecnología',
+    description: 'Instalación de sistemas inteligentes para el control de filtración, temperatura, iluminación y operación de tu alberca. Mayor eficiencia, menor consumo y comodidad total desde tu teléfono.',
+  },
 ];
 
 export default function Services() {

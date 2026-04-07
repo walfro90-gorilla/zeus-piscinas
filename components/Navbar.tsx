@@ -1,9 +1,11 @@
+import logoZeus from '../assets/logo-zeus.png';
+
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-slate/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a href="#inicio" className="flex items-center gap-3">
-          <img src="https://wnujoyzdpdyxblgdtxjw.supabase.co/storage/v1/object/public/gorilla-assets/zeus-piscinas/logo-a.png?v=1775518303805" alt="Logo ZEUS Piscinas" className="h-11 w-11 rounded-full bg-white object-contain p-1 shadow-glow" />
+          <img src={logoZeus.src} alt="Logo ZEUS Piscinas" className="h-11 w-11 object-contain" />
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-aqua">ZEUS Piscinas</p>
             <p className="text-xs text-slate-300">Construcción y mantenimiento premium</p>

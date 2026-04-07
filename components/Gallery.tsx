@@ -1,4 +1,14 @@
-const items = ['Diseño arquitectónico de alto impacto', 'Acabados premium y detalles dorados', 'Iluminación ambiental para noches exclusivas', 'Mantenimiento técnico con estándares profesionales'];
+import g1 from '../assets/gallery/g1.jpeg';
+import g2 from '../assets/gallery/g2.jpeg';
+import g3 from '../assets/gallery/g3.jpeg';
+import g4 from '../assets/gallery/g4.jpeg';
+
+const items = [
+  { img: g1, label: 'Diseño arquitectónico de alto impacto' },
+  { img: g2, label: 'Acabados premium y detalles dorados' },
+  { img: g3, label: 'Iluminación ambiental para noches exclusivas' },
+  { img: g4, label: 'Mantenimiento técnico con estándares profesionales' },
+];
 
 export default function Gallery() {
   return (
@@ -10,9 +20,9 @@ export default function Gallery() {
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {items.map((item) => (
-            <div key={item} className="rounded-3xl border border-white/10 bg-brand-blue/40 p-6">
-              <div className="mb-6 h-40 rounded-2xl bg-gradient-to-br from-brand-aqua/30 via-white/5 to-brand-gold/20" />
-              <p className="text-lg font-semibold text-white">{item}</p>
+            <div key={item.label} className="rounded-3xl border border-white/10 bg-brand-blue/40 overflow-hidden">
+              <img src={item.img.src} alt={item.label} className="h-48 w-full object-cover" />
+              <p className="p-5 text-lg font-semibold text-white">{item.label}</p>
             </div>
           ))}
         </div>
