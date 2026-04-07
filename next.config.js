@@ -6,6 +6,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'wnujoyzdpdyxblgdtxjw.supabase.co',
+        pathname: '/storage/v1/object/public/gorilla-assets/**',
       },
     ],
   },

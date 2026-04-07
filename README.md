@@ -9,12 +9,14 @@ npm install
 npm run dev
 ```
 
-## Build
+## Despliegue en Vercel
 
-```bash
-npm run build
-```
+Este proyecto usa Next.js con `output: 'standalone'`.
 
-## Nota de despliegue
+Si Vercel muestra un error de Output Directory, verifica en **Project Settings**:
+- Framework Preset: **Next.js**
+- Build Command: `npm run build`
+- Output Directory: **vacío / automático**
+- No sobrescribir con `public`
 
-Este proyecto usa Next.js con salida `standalone`. Si Vercel sigue mostrando un error de `Output Directory`, revisa la configuración del proyecto y elimina cualquier override manual de `public` en **Build & Output Settings**.
+Si existe un override manual de `public`, elimínalo.
