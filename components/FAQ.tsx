@@ -16,8 +16,12 @@ const faqs = [
     answer: 'Nuestro mantenimiento incluye: limpieza del agua y paredes, balance químico completo, revisión y servicio de bomba y filtros, aspirado de fondo, limpieza de skimmers y reporte del estado del equipo. Contamos con contratos mensuales y por visita.',
   },
   {
-    question: '¿Hacen remodelaciones de albercas antiguas?',
-    answer: 'Sí. Remodelamos albercas en toda Ciudad Juárez: actualizamos acabados, instalamos iluminación LED, modernizamos sistemas de filtración, cambiamos la forma o ampliamos la alberca existente. Trabajamos sobre proyectos de cualquier edad.',
+    question: '¿Hacen remodelaciones de albercas antiguas? ¿Qué edad puede tener mi alberca?',
+    answer: 'Sí. Remodelamos albercas de cualquier antigüedad en toda Ciudad Juárez: actualizamos acabados, instalamos iluminación LED, agregamos cascadas, modernizamos sistemas de filtración y ampliamos la alberca existente. No importa la edad de tu alberca, la transformamos.',
+  },
+  {
+    question: '¿Ofrecen servicio de revisión y mantenimiento de calderas?',
+    answer: 'Sí. Realizamos revisión, mantenimiento y reparación de calderas para albercas y uso residencial. Verificamos el funcionamiento, eficiencia y seguridad de tu caldera para garantizar agua caliente todo el año.',
   },
   {
     question: '¿Atienden toda la zona de Ciudad Juárez?',
@@ -25,7 +29,7 @@ const faqs = [
   },
   {
     question: '¿Trabajan proyectos comerciales y residenciales?',
-    answer: 'Sí. Ejecutamos proyectos residenciales (casas y condominios), comerciales (hoteles, clubes, desarrollos) e industriales. Cada proyecto recibe atención personalizada con ingeniería y acabados a la medida.',
+    answer: 'Sí. Ejecutamos proyectos residenciales (casas, condominios, Airbnb), comerciales (hoteles, jardines, clubes, desarrollos) e industriales. Cada proyecto recibe atención personalizada con ingeniería y acabados a la medida, como tú te mereces.',
   },
 ];
 

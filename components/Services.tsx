@@ -4,16 +4,20 @@ const services = [
     description: 'Diseño y construcción de albercas residenciales y comerciales en Ciudad Juárez desde el concepto hasta la entrega final. Trabajamos con materiales de primera y acabados premium que elevan el valor de tu propiedad.',
   },
   {
-    title: 'Mantenimiento profesional de albercas',
-    description: 'Servicio de mantenimiento periódico en toda la zona de Ciudad Juárez: limpieza, balance químico, revisión de bombas y filtros. Agua cristalina y equipo en óptimas condiciones todo el año.',
+    title: 'Remodelación de obra y cascadas',
+    description: 'Modernizamos albercas existentes con nuevos acabados, iluminación LED, sistemas de filtración eficientes y cascadas decorativas. Transformamos cualquier espacio acuático sin importar su antigüedad.',
   },
   {
-    title: 'Remodelación de albercas en Juárez',
-    description: 'Modernizamos albercas existentes en Ciudad Juárez con nuevos acabados, iluminación LED, sistemas de filtración eficientes y detalles arquitectónicos de alto impacto.',
+    title: 'Mantenimiento y revisión de calderas',
+    description: 'Servicio de mantenimiento periódico: limpieza, balance químico, revisión de bombas, filtros y calderas. Agua cristalina y equipo en óptimas condiciones todo el año.',
   },
   {
-    title: 'Automatización y tecnología',
-    description: 'Instalación de sistemas inteligentes para el control de filtración, temperatura, iluminación y operación de tu alberca. Mayor eficiencia, menor consumo y comodidad total desde tu teléfono.',
+    title: 'Instalación de climas',
+    description: 'Instalación profesional de sistemas de climatización para tu hogar o negocio. Mayor eficiencia energética, confort total y servicio técnico especializado.',
+  },
+  {
+    title: 'Proyectos residenciales y comerciales',
+    description: 'Atendemos casas, Airbnb, jardines, hoteles y comunidades. Cada proyecto recibe atención personalizada con ingeniería y acabados a la medida, porque te lo mereces.',
   },
 ];
 
@@ -22,7 +26,7 @@ export default function Services() {
     <section id="servicios" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="mb-12 max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-aqua">Servicios</p>
-        <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">Soluciones premium para piscinas que exigen nivel ejecutivo.</h2>
+        <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">Soluciones premium para cada proyecto. Mejoramos cualquier presupuesto.</h2>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
         {services.map((service) => (

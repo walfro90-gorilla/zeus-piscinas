@@ -15,7 +15,7 @@ export default function Hero() {
             Piscinas de lujo en Ciudad Juárez
           </span>
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-7xl">
-            Construimos experiencias acuáticas que elevan tu propiedad.
+            Construimos la piscina de tus sueños.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
             Diseño, construcción, remodelación y mantenimiento profesional con estética premium,
@@ -29,7 +29,7 @@ export default function Hero() {
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-400"
             >
-              Cotizar por WhatsApp
+              Agenda tu cita por WhatsApp
             </a>
             <a
               href={MESSENGER_URL}

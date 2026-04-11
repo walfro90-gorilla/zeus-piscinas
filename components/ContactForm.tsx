@@ -35,7 +35,7 @@ export default function ContactForm() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-gold">Contacto</p>
-          <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">Cuéntanos tu proyecto y te respondemos con una propuesta clara.</h2>
+          <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">Cuéntanos en qué podemos apoyarte?</h2>
           <p className="mt-4 max-w-xl text-lg leading-8 text-slate-300">Si buscas una piscina de lujo o un mantenimiento profesional en Ciudad Juárez, este es el punto de partida.</p>
           <div className="mt-8 flex flex-col gap-4">
             <a href="https://wa.me/526566452656?text=Hola%20ZEUS%20Piscinas%2C%20quiero%20cotizar%20mi%20proyecto." target="_blank" rel="noreferrer" className="flex items-center gap-3 text-slate-300 transition hover:text-brand-aqua">

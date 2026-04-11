@@ -4,6 +4,7 @@ import Services from '@/components/Services';
 import Gallery from '@/components/Gallery';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
+import QuienesSomos from '@/components/QuienesSomos';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Gallery />
       <Testimonials />
       <FAQ />
+      <QuienesSomos />
       <ContactForm />
       <Footer />
     </main>
