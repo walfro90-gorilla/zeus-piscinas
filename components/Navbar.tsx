@@ -15,6 +15,7 @@ export default function Navbar() {
           <a href="#servicios" className="transition hover:text-brand-aqua">Servicios</a>
           <a href="#galeria" className="transition hover:text-brand-aqua">Galería</a>
           <a href="#testimonios" className="transition hover:text-brand-aqua">Testimonios</a>
+          <a href="#quienes-somos" className="transition hover:text-brand-aqua">Quiénes somos</a>
           <a href="#contacto" className="transition hover:text-brand-aqua">Contacto</a>
         </nav>
         <a href="#contacto" className="rounded-full border border-brand-gold/40 px-4 py-2 text-sm font-semibold text-brand-gold transition hover:bg-brand-gold hover:text-brand-slate">Cotizar ahora</a>

@@ -16,7 +16,7 @@ export default function Gallery() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-gold">Galería</p>
-          <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">Una presencia visual que comunica confianza, lujo y precisión.</h2>
+          <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">La transparencia es nuestra carta de presentación.</h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {items.map((item) => (
