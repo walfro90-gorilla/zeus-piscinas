@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tailwindcss:*)",
+      "Bash(file x:/Codes/zeus-piscinas/assets/hero.png x:/Codes/zeus-piscinas/assets/hero.jpeg x:/Codes/zeus-piscinas/assets/gallery/*.jpeg)"
+    ]
+  }
+}

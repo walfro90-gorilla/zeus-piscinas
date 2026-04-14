@@ -7,27 +7,22 @@ type FormState = { name: string; phone: string; message: string };
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>({ name: '', phone: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (field: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
-    setStatus('idle');
-
-    try {
-      if (!form.name.trim() || !form.phone.trim() || !form.message.trim()) throw new Error('Completa todos los campos.');
-      await new Promise((resolve) => setTimeout(resolve, 700));
-      setStatus('success');
-      setForm({ name: '', phone: '', message: '' });
-    } catch {
+    if (!form.name.trim() || !form.phone.trim() || !form.message.trim()) {
       setStatus('error');
-    } finally {
-      setLoading(false);
+      return;
     }
+    const text = `Hola ZEUS Piscinas, les escribo desde su sitio web.\n\n*Nombre:* ${form.name}\n*Teléfono:* ${form.phone}\n*Mensaje:* ${form.message}`;
+    const url = `https://wa.me/526566452656?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noreferrer');
+    setStatus('success');
+    setForm({ name: '', phone: '', message: '' });
   };
 
   return (
@@ -47,13 +42,63 @@ export default function ContactForm() {
               ZeusAlbercas@gmail.com
             </a>
           </div>
+
+          {/* Redes sociales */}
+          <div className="mt-10">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">Síguenos en redes</p>
+            <div className="flex gap-4">
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/profile.php?id=61573671871897"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+                className="flex h-12 w-12 items-center justify-center rounded-full text-white transition hover:scale-110"
+                style={{ backgroundColor: '#1877F2' }}
+              >
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+                </svg>
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/zeusalbercasjrz/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="flex h-12 w-12 items-center justify-center rounded-full text-white transition hover:scale-110"
+                style={{ background: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)' }}
+              >
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                </svg>
+              </a>
+
+              {/* TikTok */}
+              <a
+                href="https://www.tiktok.com/@zeus_albercas_jrz"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="TikTok"
+                className="flex h-12 w-12 items-center justify-center rounded-full text-white transition hover:scale-110"
+                style={{ backgroundColor: '#010101' }}
+              >
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+                </svg>
+              </a>
+
+            </div>
+          </div>
         </div>
         <form onSubmit={handleSubmit} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20">
           <div className="grid gap-4">
             <input value={form.name} onChange={handleChange('name')} placeholder="Nombre completo" className="rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-brand-aqua" />
             <input value={form.phone} onChange={handleChange('phone')} placeholder="Teléfono / WhatsApp" className="rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-brand-aqua" />
             <textarea value={form.message} onChange={handleChange('message')} placeholder="Cuéntanos qué necesitas" rows={5} className="rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-brand-aqua" />
-            <button disabled={loading} className="rounded-full bg-brand-gold px-6 py-3 font-semibold text-brand-slate transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60">{loading ? 'Enviando...' : 'Enviar solicitud'}</button>
+            <button className="rounded-full bg-brand-gold px-6 py-3 font-semibold text-brand-slate transition hover:opacity-90">Enviar por WhatsApp</button>
             {status === 'success' && <p className="text-sm text-brand-aqua">Mensaje enviado correctamente. Te contactaremos pronto.</p>}
             {status === 'error' && <p className="text-sm text-red-400">Revisa los campos e inténtalo de nuevo.</p>}
           </div>
